@@ -1,8 +1,5 @@
 require "core"
 
--- vim.opt.spelllang = 'en_us'
--- vim.opt.spell = true
-
 require("core.utils").load_mappings()
 
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
