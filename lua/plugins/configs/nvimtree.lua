@@ -19,8 +19,24 @@ local options = {
     preserve_window_proportions = true,
   },
   git = {
-    enable = false,
+    enable = true,
     ignore = true,
+  },
+  diagnostics = {
+    enable = false,
+    show_on_dirs = false,
+    show_on_open_dirs = true,
+    debounce_delay = 50,
+    severity = {
+      min = vim.diagnostic.severity.HINT,
+      max = vim.diagnostic.severity.ERROR,
+    },
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    },
   },
   filesystem_watchers = {
     enable = true,
@@ -28,6 +44,7 @@ local options = {
   actions = {
     open_file = {
       resize_window = true,
+      quit_on_open = true,
     },
   },
   renderer = {
@@ -44,7 +61,8 @@ local options = {
         file = true,
         folder = true,
         folder_arrow = true,
-        git = false,
+        git = true,
+        diagnostics = true,
       },
 
       glyphs = {
