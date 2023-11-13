@@ -43,3 +43,9 @@ lspconfig.gopls.setup{
   }
 }
 
+require("flutter-tools").setup {
+  lsp = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+}
