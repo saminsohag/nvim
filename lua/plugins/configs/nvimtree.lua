@@ -23,9 +23,9 @@ local options = {
     ignore = true,
   },
   diagnostics = {
-    enable = false,
-    show_on_dirs = false,
-    show_on_open_dirs = true,
+    enable = true,
+    show_on_dirs = true,
+    show_on_open_dirs = false,
     debounce_delay = 50,
     severity = {
       min = vim.diagnostic.severity.HINT,
