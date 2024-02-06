@@ -216,9 +216,11 @@ M.lspconfig = {
 
     ["<leader>q"] = {
       function()
-        vim.diagnostic.setloclist()
+        -- vim.diagnostic.setloclist()
+        vim.diagnostic.setqflist()
       end,
-      "Diagnostic setloclist",
+      -- "Diagnostic setloclist",
+      "Diagnostic setqflist",
     },
 
     ["<leader>wa"] = {

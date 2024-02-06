@@ -43,9 +43,11 @@ lspconfig.gopls.setup{
   }
 }
 
+
 require("flutter-tools").setup {
   lsp = {
     on_attach = on_attach,
     capabilities = capabilities,
   }
 }
+vim.api.nvim_set_keymap("n", "<leader>rr", ":FlutterReload<CR>",{noremap=true})
