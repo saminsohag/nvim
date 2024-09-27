@@ -58,6 +58,14 @@ local plugins = {
       require('rust-tools').setup(opts)
     end,
   },
+  {
+    'williamboman/mason.nvim',
+    opts = {
+        ensure_installed = {
+        "typescript-language-server",
+      },
+    },
+  },
 }
 
 return plugins
