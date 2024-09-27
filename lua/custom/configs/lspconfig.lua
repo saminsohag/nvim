@@ -56,3 +56,4 @@ require("flutter-tools").setup {
   }
 }
 vim.api.nvim_set_keymap("n", "<leader>rr", ":FlutterReload<CR>",{noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>RR", ":FlutterRestart<CR>",{noremap=true})

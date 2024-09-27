@@ -14,6 +14,7 @@ local plugins = {
         "gopls",
         "rust-analyzer",
         "clangd",
+        "typescript-language-server",
       },
     },
   },
@@ -57,14 +58,6 @@ local plugins = {
     config = function (_,opts)
       require('rust-tools').setup(opts)
     end,
-  },
-  {
-    'williamboman/mason.nvim',
-    opts = {
-        ensure_installed = {
-        "typescript-language-server",
-      },
-    },
   },
 }
 
