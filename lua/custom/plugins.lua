@@ -10,6 +10,7 @@ local plugins = {
     "williamboman/mason.nvim",
     opts ={
       ensure_installed = {
+        "eslint-lsp",
         "pyright",
         "gopls",
         "rust-analyzer",
@@ -33,6 +34,9 @@ local plugins = {
         'stevearc/dressing.nvim', -- optional for vim.ui.select
     },
     config = true,
+  },
+  {
+    "dart-lang/dart-vim-plugin"
   },
   {
     'stevearc/conform.nvim',

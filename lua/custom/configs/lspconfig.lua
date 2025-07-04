@@ -19,14 +19,19 @@ lspconfig.pyright.setup({
   capabilities = capabilities,
   filetypes = {"python"},
   root_directory = {},
-  settings = {
-    python = {
-      pythonPath = "/opt/homebrew/bin/python3.11",
-    },
-  },
+  -- settings = {
+  --   python = {
+  --     pythonPath = "/opt/homebrew/bin/python3.11",
+  --   },
+  -- },
 })
 
 lspconfig.ts_ls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
+lspconfig.eslint.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
@@ -48,11 +53,18 @@ lspconfig.gopls.setup{
   }
 }
 
-
 require("flutter-tools").setup {
   lsp = {
     on_attach = on_attach,
     capabilities = capabilities,
+  },
+  dev_log = {
+    enabled = true,
+    notify_errors = true,
+    open_cmd = "tabnew", -- Open logs in a bottom split
+      filter = function(log_line)
+        return not (log_line:match("^D") or log_line:match("^I/MESA")) -- Exclude lines starting with "D"
+      end,
   }
 }
 vim.api.nvim_set_keymap("n", "<leader>rr", ":FlutterReload<CR>",{noremap=true})
