@@ -42,7 +42,7 @@ local plugins = {
     'stevearc/conform.nvim',
     event = { "BufReadPre", "BufNewFile" },
     config = function ()
-      require "custom.configs.formmater"
+      require "custom.configs.formatter"
     end
   },
   {
